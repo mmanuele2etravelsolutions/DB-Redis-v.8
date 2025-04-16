@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo docker run -d \
+  --name redis_server \
+  --restart always \
+  -p 6379:6379 \
+  -v /var/lib/redis:/data \
+  redis:7-alpine \
+  redis-server \
+  --requirepass XXXXXXXXXX \
+  --bind 0.0.0.0
