@@ -24,4 +24,8 @@ sysctl -w vm.swappiness=10
 echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf
 echo 'vm.swappiness=10' >> /etc/sysctl.conf
 
+echo "✅ Permisos del directorio"
+sudo chown redis:redis /var/lib/redis
+sudo chmod 770 /var/lib/redis
+
 echo "[✓] Configuración completa. Se recomienda reiniciar el sistema."
